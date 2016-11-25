@@ -65,7 +65,7 @@ SidebarHandler.prototype = {
           width: d.dockWinWidth,
           height: c.height
         };
-        positionWindow(b.dockWindowId, b.currentDockWindowMetrics);
+        if (c.state != "maximized") positionWindow(b.dockWindowId, b.currentDockWindowMetrics);
         var e = {
           url: "sidebar.html",
           type: "popup",
